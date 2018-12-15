@@ -21,6 +21,8 @@ jobs:
       script: yarn build @lashar/ng-lazyload
     - stage: deploy
       name: "Deploy to NPM"
+      before_deploy:
+        - cd dist/lashar/lazyload
       addons:
         chrome: stable
       cache:
@@ -30,6 +32,7 @@ jobs:
           - dist
       provider: npm
       email: mehdi.daneshvar@live.co.uk
+      skip_cleanup: true
       api_key:
         secure: YjZsiPwS/fcQzxdHIMqVdPcXCI94hXNzvZysaU5Tfv15IioZhGML9nHZbpJW7hqQrYbTq+Pl3PODGIvlRLJZLOG15dqB/YYnGin5Qsnq+WU74xzicp9QVJT4tTh1sGyVdvHu2zffO85YNr2/mE/0vCXj9fFoToCBIJxbqZfcRqBWpgFpekMRJxqajRE3hW0zgP2U7Cu18iat5qRKAY2PFfg9iHaWJQs7NmaFTJz4iVY3ZbNM/70GIvYicfJR0fHSiJoIN5SRWJInEIoN5b90ZMZ7BvbyteTRcl38Bl2+wI0F/0vtuNSzOHMNQ3tHfDW5L+ZHluM55ocanzv50ZrHJhwzsL1wCvbkzw8LSviVihagWbG0aMH4HnbPQ5SZq0LH6kleuvMFzcFhu7zEX1YM9ujp8Aj8fw2jgyRCgCLMT0PhoX1C1cKjvRtxz6rnY/yg0r2ky0A2TaXKsw1EXcGUUPY2hHeTBemcqeCgj1kJGeD7ScRwp58ix7+BLwCeL5hC13w6rPQTJqFWhL9hYHIMCiZQXw/pqDVDUe4ijSIn4DfIGFijiD/G4PsUA+CJ7xQ0jJemCthk6rZBwpojU6khAteJ6z4tupkukpOAhaR79v3Hf3D9i7gL/sj9cm5Bp8Cr4aPDHdxZMFdXb2uFaG4R7KAi1cSz7NPgFTcvJ+NRNlo=
       on:

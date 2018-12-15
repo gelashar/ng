@@ -1,6 +1,17 @@
 {
   "name": "@lashar/ng-lazyload",
   "version": "0.0.1",
+  "author": {
+    "name": "Mehdi Daneshvar",
+    "email": "mehdi.daneshvar@live.co.uk"
+  },
+  "publishConfig": {
+      "access": "public"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/gelashar/ng"
+  },
   "peerDependencies": {
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0"
