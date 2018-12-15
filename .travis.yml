@@ -13,17 +13,21 @@ jobs:
       script: yarn test
     - stage: "Build"
       name: "Build @lashar/ng-lazyload"
-      cache: yarn
+      cache:
         directories:
-        - dist
+          - $HOME/.cache/yarn
+          - node_modules
+          - dist
       script: yarn build @lashar/ng-lazyload
     - stage: deploy
       name: "Deploy to NPM"
       addons:
         chrome: stable
-      cache: yarn
+      cache:
         directories:
-        - dist
+          - $HOME/.cache/yarn
+          - node_modules
+          - dist
       provider: npm
       email: mehdi.daneshvar@live.co.uk
       api_key:
