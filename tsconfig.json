@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "@gelashar/ng-lazyload": [
-        "dist/gelashar/ng-lazyload"
+      "@lashar/ng-lazyload": [
+        "dist/lashar/ng-lazyload"
       ],
-      "@gelashar/ng-lazyload/*": [
-        "dist/gelashar/ng-lazyload/*"
+      "@lashar/ng-lazyload/*": [
+        "dist/lashar/ng-lazyload/*"
       ]
     }
   }
