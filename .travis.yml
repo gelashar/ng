@@ -2,7 +2,6 @@ language: node_js
 node_js:
 - "10.14"
 cache: yarn
-
 before_install:
   - npm i -g yarn
 install:
@@ -14,11 +13,17 @@ jobs:
       script: yarn test
     - stage: "Build"
       name: "Build @lashar/ng-lazyload"
+      cache: yarn
+        directories:
+        - dist
       script: yarn build @lashar/ng-lazyload
     - stage: deploy
       name: "Deploy to NPM"
       addons:
         chrome: stable
+      cache: yarn
+        directories:
+        - dist
       provider: npm
       email: mehdi.daneshvar@live.co.uk
       api_key:
@@ -26,4 +31,4 @@ jobs:
       on:
         tags: true
         repo: "@lashar/ng-lazyload"
-      script: npm publish dist/lashar/lazyload --access=public 
+      
