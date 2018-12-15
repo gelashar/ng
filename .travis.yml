@@ -17,7 +17,7 @@ script:
 - yarn test
 - yarn build @lashar/ng-lazyload
 before_deploy:
-- cd dist/lashar/lazyload
+- cd dist/lashar/ng-lazyload
 deploy:
   provider: npm
   email: mehdi.daneshvar@live.co.uk
