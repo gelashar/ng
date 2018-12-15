@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@gelashar/ng-lazyload": [
+        "dist/gelashar/ng-lazyload"
+      ],
+      "@gelashar/ng-lazyload/*": [
+        "dist/gelashar/ng-lazyload/*"
+      ]
+    }
   }
 }
