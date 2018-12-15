@@ -1,6 +1,8 @@
 language: node_js
 node_js:
 - "10.14"
+addons:
+  chrome: stable
 deploy:
   provider: npm
   email: mehdi.daneshvar@live.co.uk
