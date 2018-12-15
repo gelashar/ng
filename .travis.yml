@@ -1,33 +1,28 @@
 language: node_js
 node_js:
-- "10.14"
+- '10.14'
 cache:
   directories:
   - $HOME/.cache/yarn
   - node_modules
   - dist
-
 addons:
   chrome: stable
-
 before_install:
-  - npm i -g yarn
-  - yarn -v
+- npm i -g yarn
+- yarn -v
 install:
-  - yarn
-
-script: 
-  - yarn test
-  - yarn build @lashar/ng-lazyload
+- yarn
+script:
+- yarn test
+- yarn build @lashar/ng-lazyload
 before_deploy:
-  - cd dist/lashar/lazyload
+- cd dist/lashar/lazyload
 deploy:
   provider: npm
   email: mehdi.daneshvar@live.co.uk
   skip_cleanup: true
   api_key:
-    secure: YjZsiPwS/fcQzxdHIMqVdPcXCI94hXNzvZysaU5Tfv15IioZhGML9nHZbpJW7hqQrYbTq+Pl3PODGIvlRLJZLOG15dqB/YYnGin5Qsnq+WU74xzicp9QVJT4tTh1sGyVdvHu2zffO85YNr2/mE/0vCXj9fFoToCBIJxbqZfcRqBWpgFpekMRJxqajRE3hW0zgP2U7Cu18iat5qRKAY2PFfg9iHaWJQs7NmaFTJz4iVY3ZbNM/70GIvYicfJR0fHSiJoIN5SRWJInEIoN5b90ZMZ7BvbyteTRcl38Bl2+wI0F/0vtuNSzOHMNQ3tHfDW5L+ZHluM55ocanzv50ZrHJhwzsL1wCvbkzw8LSviVihagWbG0aMH4HnbPQ5SZq0LH6kleuvMFzcFhu7zEX1YM9ujp8Aj8fw2jgyRCgCLMT0PhoX1C1cKjvRtxz6rnY/yg0r2ky0A2TaXKsw1EXcGUUPY2hHeTBemcqeCgj1kJGeD7ScRwp58ix7+BLwCeL5hC13w6rPQTJqFWhL9hYHIMCiZQXw/pqDVDUe4ijSIn4DfIGFijiD/G4PsUA+CJ7xQ0jJemCthk6rZBwpojU6khAteJ6z4tupkukpOAhaR79v3Hf3D9i7gL/sj9cm5Bp8Cr4aPDHdxZMFdXb2uFaG4R7KAi1cSz7NPgFTcvJ+NRNlo=
+    secure: Aa0ui3+S1ggHHa480QkTtrnvdR742XErwiS24KuAWe7LFDVlqyK3FLCrX9lqv81XlMcHb6CVNMpl5ihKohvQCjMqD2CsS/gQ2Q+RLjL15X0QZ5F9rRoKNsBit/G97LrqaRZOqsgbmn/OGKS8XQTb4UXMNSRISspP63eQTfDQVyHj4v/67TzU9gm2Z+Hs/FOo2pzW8CLmupTXqIjcItg6xboQ/XUE4Z8AMZXn5gY9kuTr/eZtZ6AJM5SzkNrav/LC/qguqY/9LsHknAgtyO6Z4x3CmtIjrm7oBgbCGBU5tUx0Ozcx6d0uAVS1tEV3L7qbRXG7QRXDhqWmYVkKmqdX+I4xtk7zGMrHnhVUXow21Z9SC1Q7qzJE35EI8yC+m8jmPErZ2Xyvj2C5PCsnQLBJeCha3DxV23RpiV0yyWP1c+cnvBvlLXkN435+ehaFfsXIw6cXpCVADPDCFRPfvBkaGFimKJ5ZuRqhV8xgjxmubn/7wFCygpyKaiWJMK8gQ37PYqEO8cgz3Iv1UrJUlFoqsoyoALbn5IIpczCI0auffTB8pb3qcE9qlkSDY3gKUaAZrGDJ1sCycRTjVmCoErWh2aYu2g1sk7y/RLc8dmm6+Nxn2gx3/btWKjXNeBY3YuS7T6gw0OahBZ7v2IvsN9fArIEvbmC2eIUJygyUzhSxjsU=
   on:
     tags: true
-    repo: "@lashar/ng-lazyload"
-  
