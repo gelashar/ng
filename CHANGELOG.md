@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/gelashar/ng/compare/v0.0.3-1...v0.1.0) (2018-12-16)
+
+
+### Features
+
+* **lerna:** removed ([48b49f7](https://github.com/gelashar/ng/commit/48b49f7))
+
+
+
 <a name="0.0.3-1"></a>
 ## [0.0.3-1](https://github.com/gelashar/ng/compare/v0.0.3-0...v0.0.3-1) (2018-12-16)
 
