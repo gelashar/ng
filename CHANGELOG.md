@@ -1,3 +1,7 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ### Publish (HEAD -> master, tag: @lashar/ng-lazyload@1.0.1, origin/master)
 >Sun, 16 Dec 2018 20:29:30 +0330
 
@@ -376,7 +380,3 @@
 >Author: Mehdi Daneshvar (mehdi.daneshvar@live.co.uk)
 
 >Commiter: Mehdi Daneshvar (mehdi.daneshvar@live.co.uk)
-
-
-
-
